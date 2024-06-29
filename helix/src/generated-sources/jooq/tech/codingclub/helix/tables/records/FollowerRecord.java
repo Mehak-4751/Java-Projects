@@ -11,31 +11,31 @@ package tech.codingclub.helix.tables.records;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class FollowerRecord extends org.jooq.impl.TableRecordImpl<tech.codingclub.helix.tables.records.FollowerRecord> implements org.jooq.Record2<java.lang.Long, java.lang.Long> {
 
-	private static final long serialVersionUID = -58351856;
+	private static final long serialVersionUID = 499793680;
 
 	/**
-	 * Setter for <code>public.follower.user_id</code>.
+	 * Setter for <code>public.Follower.user_id</code>.
 	 */
 	public void setUserId(java.lang.Long value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>public.follower.user_id</code>.
+	 * Getter for <code>public.Follower.user_id</code>.
 	 */
 	public java.lang.Long getUserId() {
 		return (java.lang.Long) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>public.follower.following_id</code>.
+	 * Setter for <code>public.Follower.following_id</code>.
 	 */
 	public void setFollowingId(java.lang.Long value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>public.follower.following_id</code>.
+	 * Getter for <code>public.Follower.following_id</code>.
 	 */
 	public java.lang.Long getFollowingId() {
 		return (java.lang.Long) getValue(1);

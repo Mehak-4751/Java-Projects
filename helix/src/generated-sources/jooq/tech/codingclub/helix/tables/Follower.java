@@ -11,10 +11,10 @@ package tech.codingclub.helix.tables;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Follower extends org.jooq.impl.TableImpl<tech.codingclub.helix.tables.records.FollowerRecord> {
 
-	private static final long serialVersionUID = 2068955835;
+	private static final long serialVersionUID = -1148631047;
 
 	/**
-	 * The singleton instance of <code>public.follower</code>
+	 * The singleton instance of <code>public.Follower</code>
 	 */
 	public static final tech.codingclub.helix.tables.Follower FOLLOWER = new tech.codingclub.helix.tables.Follower();
 
@@ -27,24 +27,24 @@ public class Follower extends org.jooq.impl.TableImpl<tech.codingclub.helix.tabl
 	}
 
 	/**
-	 * The column <code>public.follower.user_id</code>.
+	 * The column <code>public.Follower.user_id</code>.
 	 */
 	public final org.jooq.TableField<tech.codingclub.helix.tables.records.FollowerRecord, java.lang.Long> USER_ID = createField("user_id", org.jooq.impl.SQLDataType.BIGINT, this, "");
 
 	/**
-	 * The column <code>public.follower.following_id</code>.
+	 * The column <code>public.Follower.following_id</code>.
 	 */
 	public final org.jooq.TableField<tech.codingclub.helix.tables.records.FollowerRecord, java.lang.Long> FOLLOWING_ID = createField("following_id", org.jooq.impl.SQLDataType.BIGINT, this, "");
 
 	/**
-	 * Create a <code>public.follower</code> table reference
+	 * Create a <code>public.Follower</code> table reference
 	 */
 	public Follower() {
-		this("follower", null);
+		this("Follower", null);
 	}
 
 	/**
-	 * Create an aliased <code>public.follower</code> table reference
+	 * Create an aliased <code>public.Follower</code> table reference
 	 */
 	public Follower(java.lang.String alias) {
 		this(alias, tech.codingclub.helix.tables.Follower.FOLLOWER);
@@ -56,22 +56,6 @@ public class Follower extends org.jooq.impl.TableImpl<tech.codingclub.helix.tabl
 
 	private Follower(java.lang.String alias, org.jooq.Table<tech.codingclub.helix.tables.records.FollowerRecord> aliased, org.jooq.Field<?>[] parameters) {
 		super(alias, tech.codingclub.helix.Public.PUBLIC, aliased, parameters, "");
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public java.util.List<org.jooq.UniqueKey<tech.codingclub.helix.tables.records.FollowerRecord>> getKeys() {
-		return java.util.Arrays.<org.jooq.UniqueKey<tech.codingclub.helix.tables.records.FollowerRecord>>asList(tech.codingclub.helix.Keys.FOLLOWER_USER_ID_FOLLOWING_ID_KEY);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public java.util.List<org.jooq.ForeignKey<tech.codingclub.helix.tables.records.FollowerRecord, ?>> getReferences() {
-		return java.util.Arrays.<org.jooq.ForeignKey<tech.codingclub.helix.tables.records.FollowerRecord, ?>>asList(tech.codingclub.helix.Keys.FOLLOWER__FOLLOWER_USER_ID_FKEY, tech.codingclub.helix.Keys.FOLLOWER__FOLLOWER_FOLLOWING_ID_FKEY);
 	}
 
 	/**

@@ -57,7 +57,6 @@
             <version>${spring.version}</version>
         </dependency>
 
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
@@ -295,6 +294,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
+
                 <version>3.6.0</version>
                 <configuration>
                     <source>1.6</source>
@@ -413,7 +413,7 @@
             <id>LOCAL-MEHAK GARG</id>
             <properties>
                 <DB_URL>jdbc:postgresql://localhost:5432/</DB_URL>
-                <BASE_DIR>C:\Users\hp\IdeaProjects\helix</BASE_DIR>
+                <BASE_DIR>C:\Users\ant\Java_Projects\helix</BASE_DIR>
                 <DB_NAME>twitter</DB_NAME>
                 <DB_USERNAME>postgres</DB_USERNAME>
                 <DB_PASSWORD>postgres</DB_PASSWORD>

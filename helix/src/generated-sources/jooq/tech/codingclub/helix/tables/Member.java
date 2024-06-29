@@ -11,10 +11,10 @@ package tech.codingclub.helix.tables;
 @java.lang.SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Member extends org.jooq.impl.TableImpl<tech.codingclub.helix.tables.records.MemberRecord> {
 
-	private static final long serialVersionUID = -425789554;
+	private static final long serialVersionUID = -1138698450;
 
 	/**
-	 * The singleton instance of <code>public.member</code>
+	 * The singleton instance of <code>public.Member</code>
 	 */
 	public static final tech.codingclub.helix.tables.Member MEMBER = new tech.codingclub.helix.tables.Member();
 
@@ -27,54 +27,54 @@ public class Member extends org.jooq.impl.TableImpl<tech.codingclub.helix.tables
 	}
 
 	/**
-	 * The column <code>public.member.name</code>.
+	 * The column <code>public.Member.id</code>.
 	 */
-	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR.length(100), this, "");
+	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.Long> ID = createField("id", org.jooq.impl.SQLDataType.BIGINT, this, "");
 
 	/**
-	 * The column <code>public.member.email</code>.
+	 * The column <code>public.Member.name</code>.
 	 */
-	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.String> EMAIL = createField("email", org.jooq.impl.SQLDataType.VARCHAR.length(100), this, "");
+	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.String[]> NAME = createField("name", org.jooq.impl.SQLDataType.CHAR.getArrayDataType(), this, "");
 
 	/**
-	 * The column <code>public.member.password</code>.
+	 * The column <code>public.Member.email</code>.
 	 */
-	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.String> PASSWORD = createField("password", org.jooq.impl.SQLDataType.VARCHAR.length(30), this, "");
+	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.String[]> EMAIL = createField("email", org.jooq.impl.SQLDataType.CHAR.getArrayDataType(), this, "");
 
 	/**
-	 * The column <code>public.member.role</code>.
+	 * The column <code>public.Member.role</code>.
 	 */
-	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.String> ROLE = createField("role", org.jooq.impl.SQLDataType.VARCHAR.length(20), this, "");
+	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.String[]> ROLE = createField("role", org.jooq.impl.SQLDataType.CHAR.getArrayDataType(), this, "");
 
 	/**
-	 * The column <code>public.member.image</code>.
+	 * The column <code>public.Member.password</code>.
 	 */
-	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.String> IMAGE = createField("image", org.jooq.impl.SQLDataType.VARCHAR.length(100), this, "");
+	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.String[]> PASSWORD = createField("password", org.jooq.impl.SQLDataType.CHAR.getArrayDataType(), this, "");
 
 	/**
-	 * The column <code>public.member.token</code>.
+	 * The column <code>public.Member.image</code>.
 	 */
-	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.String> TOKEN = createField("token", org.jooq.impl.SQLDataType.VARCHAR.length(30), this, "");
+	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.String[]> IMAGE = createField("image", org.jooq.impl.SQLDataType.CHAR.getArrayDataType(), this, "");
 
 	/**
-	 * The column <code>public.member.is_verified</code>.
+	 * The column <code>public.Member.token</code>.
+	 */
+	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.String[]> TOKEN = createField("token", org.jooq.impl.SQLDataType.CHAR.getArrayDataType(), this, "");
+
+	/**
+	 * The column <code>public.Member.is_verified</code>.
 	 */
 	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.Boolean> IS_VERIFIED = createField("is_verified", org.jooq.impl.SQLDataType.BOOLEAN, this, "");
 
 	/**
-	 * The column <code>public.member.id</code>.
-	 */
-	public final org.jooq.TableField<tech.codingclub.helix.tables.records.MemberRecord, java.lang.Long> ID = createField("id", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaulted(true), this, "");
-
-	/**
-	 * Create a <code>public.member</code> table reference
+	 * Create a <code>public.Member</code> table reference
 	 */
 	public Member() {
-		this("member", null);
+		this("Member", null);
 	}
 
 	/**
-	 * Create an aliased <code>public.member</code> table reference
+	 * Create an aliased <code>public.Member</code> table reference
 	 */
 	public Member(java.lang.String alias) {
 		this(alias, tech.codingclub.helix.tables.Member.MEMBER);
@@ -86,30 +86,6 @@ public class Member extends org.jooq.impl.TableImpl<tech.codingclub.helix.tables
 
 	private Member(java.lang.String alias, org.jooq.Table<tech.codingclub.helix.tables.records.MemberRecord> aliased, org.jooq.Field<?>[] parameters) {
 		super(alias, tech.codingclub.helix.Public.PUBLIC, aliased, parameters, "");
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public org.jooq.Identity<tech.codingclub.helix.tables.records.MemberRecord, java.lang.Long> getIdentity() {
-		return tech.codingclub.helix.Keys.IDENTITY_MEMBER;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public org.jooq.UniqueKey<tech.codingclub.helix.tables.records.MemberRecord> getPrimaryKey() {
-		return tech.codingclub.helix.Keys.MEMBER_PKEY;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public java.util.List<org.jooq.UniqueKey<tech.codingclub.helix.tables.records.MemberRecord>> getKeys() {
-		return java.util.Arrays.<org.jooq.UniqueKey<tech.codingclub.helix.tables.records.MemberRecord>>asList(tech.codingclub.helix.Keys.EMAIL, tech.codingclub.helix.Keys.MEMBER_PKEY);
 	}
 
 	/**

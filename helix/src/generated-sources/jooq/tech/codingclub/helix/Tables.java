@@ -14,22 +14,12 @@ package tech.codingclub.helix;
 public class Tables {
 
 	/**
-	 * The table public.coders
-	 */
-	public static final tech.codingclub.helix.tables.Coders CODERS = tech.codingclub.helix.tables.Coders.CODERS;
-
-	/**
-	 * The table public.follower
+	 * The table public.Follower
 	 */
 	public static final tech.codingclub.helix.tables.Follower FOLLOWER = tech.codingclub.helix.tables.Follower.FOLLOWER;
 
 	/**
-	 * The table public.member
+	 * The table public.Member
 	 */
 	public static final tech.codingclub.helix.tables.Member MEMBER = tech.codingclub.helix.tables.Member.MEMBER;
-
-	/**
-	 * The table public.tweet
-	 */
-	public static final tech.codingclub.helix.tables.Tweet TWEET = tech.codingclub.helix.tables.Tweet.TWEET;
 }
